@@ -17,10 +17,10 @@ transfer () {
 
   #OPTIONS
   if [ "$1" == "to-srvr" ]; then
-    if [ -z $2] || [ -z $3]; then echo -e $ERROR_CODE_1 && return 1;fi
+    if [ -z $2 ] || [ -z $3 ]; then echo -e $ERROR_CODE_1 && return 1;fi
     rsync -avrh -e "ssh -i $SSHDIR" $2 $USERNAME@$SRVR:$3
   elif [ "$1" == "from-srvr" ]; then
-    if [ -z $2] || [ -z $3]; then echo -e $ERROR_CODE_1 && return 1;fi
+    if [ -z $2 ] || [ -z $3 ]; then echo -e $ERROR_CODE_1 && return 1;fi
     rsync -avrh -e "ssh -i $SSHDIR" $USERNAME@$SRVR:$3 $2
   else
     echo """

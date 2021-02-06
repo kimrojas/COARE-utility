@@ -3,4 +3,7 @@
 ## For more info on the author, visit: https://kimrojas.github.io     ##
 
 ## COARE - SETUP LOCAL UTILITIES
-source transfer-util.sh
+DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$DIR" ]]; then DIR="PWD"; fi
+
+. "$DIR/transfer-util.sh"
