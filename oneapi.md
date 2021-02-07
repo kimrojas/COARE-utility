@@ -96,7 +96,7 @@ If you want to continue using `module` for your codes, this is your thing.
 ```
 mkdir $HOME/apps/oneapi-modulefiles
 cd $HOME/apps/oneapi
-sh modulefiles-setup.sh --output-dir=$HOME/apps/oneapi-modulefiles'
+sh modulefiles-setup.sh --output-dir=$HOME/apps/oneapi-modulefiles
 echo 'export MODULEPATH=$MODULEPATH:$HOME/apps/oneapi-modulefiles' >> ~/.bash_profile
 ```
 2. Check modules if loaded properly. 
