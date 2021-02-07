@@ -1,15 +1,13 @@
 #!/bin/bash
-## AUTHOR: KURT ROJAS                                                 ##
-## For more info on the author, visit: https://kimrojas.github.io     ##
+## AUTHOR: KURT ROJAS                    ##
+## For more info on the author,          ##
+## visit: https://kimrojas.github.io     ##
 
 ## COARE - TRANSFER UTILITY
 
 transfer () {
   
-  # set default parameters here
-  SSHDIR=/home/krojas/.ssh/coare
-  USERNAME=kurt.rojas
-  SRVR=saliksik.asti.dost.gov.ph
+
 
   # ERROR CODE
   # Incomplete input
@@ -18,10 +16,10 @@ transfer () {
   #OPTIONS
   if [ "$1" == "to-srvr" ]; then
     if [ -z $2 ] || [ -z $3 ]; then echo -e $ERROR_CODE_1 && return 1;fi
-    rsync -avrP -e "ssh -i $SSHDIR" $2 $USERNAME@$SRVR:$3
+    rsync -avrzP -e "ssh -i $SSHDIR" $2 $USERNAME@$SRVR:$3
   elif [ "$1" == "from-srvr" ]; then
     if [ -z $2 ] || [ -z $3 ]; then echo -e $ERROR_CODE_1 && return 1;fi
-    rsync -avhP -e "ssh -i $SSHDIR" $USERNAME@$SRVR:$3 $2
+    rsync -avhzP -e "ssh -i $SSHDIR" $USERNAME@$SRVR:$2 $3
   else
     echo """
     HELP: transfer
