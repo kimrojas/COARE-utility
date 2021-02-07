@@ -20,15 +20,17 @@ cd $HOME/apps/qe-6.7
 
 2. Replace
 Find `FFLAGS` and `MPI_LIBS` and replace it with the problem values. Replace `kurt.rojas` with your username.
-
+```
 FFLAGS         = -O3 -assume byterecl -g -traceback  
 MPI_LIBS       = -L/home/kurt.rojas/apps/oneapi/mpi/2021.1.1/lib -lmpi
+```
 
 3. Make
 ```
 make -j4 all
 ```
-4. Confirm success in `bin` directory.
+
+4. Confirm success in `bin` directory. `bin` should have some stuff
 
 5. Try it out.
 REMEMBER: put `. $HOME/apps/oneapi/setvars.sh` in your script before running the pw
