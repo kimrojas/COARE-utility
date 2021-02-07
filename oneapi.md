@@ -1,13 +1,13 @@
 # OneAPI setup on COARE
 
 This is a setup guide for the OneAPI in COARE.  
-Due to the recent retirement of Intel Parallel studio, [OneAPI](https://software.intel.com/content/www/us/en/develop/tools/oneapi.html) is now goto package for the intel compilers and math kernel library (MKL).
+Due to the recent retirement of Intel Parallel studio, [OneAPI](https://software.intel.com/content/www/us/en/develop/tools/oneapi.html) is now goto package for the intel compilers and math kernel library (MKL).  
 For more information, visit https://software.intel.com/content/www/us/en/develop/tools/oneapi.html
 
 MAIN DOWNLOAD WEBSITE: https://software.intel.com/content/www/us/en/develop/tools/oneapi/all-toolkits.html
 
 > NOTE: The downloads are free but requires an intel developer account. Its free to register!  
-> NOTE: 
+
 
 
 ## A. OneAPI Base Toolkit
@@ -41,6 +41,8 @@ There should be a `$HOME/apps/oneapi` directory containing many things.
 
 For reference, OneAPI Base tootlkit may be manually downloaded from this [page](https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit/download.html).
 
+
+
 ## B. OneAPI High-performance computing (HPC) Toolkit
 
 1. Make sure **SECTION A** is done.
@@ -60,6 +62,8 @@ sh l_HPCKit_p_2021.1.0.2684_offline.sh
 ```
 
 For reference, OneAPI Base tootlkit may be manually downloaded from this [page](https://software.intel.com/content/www/us/en/develop/tools/oneapi/hpc-toolkit/download.html)
+
+
 
 ## C. Confirm installation success
 1. Go to directory
@@ -82,6 +86,8 @@ which mpiifort
 
 echo $MKLROOT
 ```
+
+
 
 ## D. SETUP DFTI (Fourier transform interface)
 1. make sure `. setvars` was ran
