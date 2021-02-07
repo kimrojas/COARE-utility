@@ -96,7 +96,9 @@ echo $MKLROOT
 -->
 
 
-## E. (optional) Module setup for OneAPI
+
+## E. (UNUSABLE FOR COARE) Module setup for OneAPI
+### COARE uses environment modules v3.2, OneAPI requires 4.0 or higher.
 If you want to continue using `module` for your codes, this is your thing.  
 1. Create and declare module files
 ```
