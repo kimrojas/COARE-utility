@@ -47,15 +47,20 @@ SUGGESTION on the script:
 #SBATCH --mem=24G
 #SBATCH --exclude=saliksik-cpu-[01]
 # - - - - - - - - - - - - - - - - - - - -
-
 . $HOME/apps/oneapi/setvars.sh
 export PATH=$PATH:$HOME/apps/qe-6.7/bin/
 
 export OMP_NUM_THREADS=1
 ulimit -s unlimited
-
+# - - - - - - - - - - - - - - - - - - - -
 
 . $HOME/apps/qe-6.7/PW/examples/example01/run_example
+
+## IN FUTURE CALC, be in the working directory and follow format:
+## 
+## mpirun -np 4 pw.x -in input.scf.file > output.scf.file
+## echo $(grep "achieved" output.scf.file) 
+##
 ```
 
 You will see the run_example output in `slurm.####` file in the current directory. (run in any directory you wish)
