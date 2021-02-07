@@ -88,12 +88,12 @@ echo $MKLROOT
 ```
 
 
-
+<!--
 ## D. SETUP DFTI (Fourier transform interface)
 1. make sure `. setvars` was ran
 2. goto directory `cd $MKLROOT/include`
 3. 
-
+-->
 
 
 ## E. (optional) Module setup for OneAPI
