@@ -18,7 +18,7 @@ c_transfer () {
   # Incomplete input
   ERROR_CODE_1="ERROR: Incomplete input. \nFor more information please use 'transfer help. Exiting ...'"
 
-  #OPTIONS
+  # MAIN
   if [ "$1" == "to-srvr" ]; then
     if [ -z $2 ] || [ -z $3 ]; then echo -e $ERROR_CODE_1 && return 1;fi
     rsync -avrzP -e "ssh -i $SSHDIR" $2 $USERNAME@$SRVR:$3

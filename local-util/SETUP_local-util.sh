@@ -34,5 +34,6 @@ Detected settings ...
 
 . "$DIR/c_transfer.sh"
 . "$DIR/c_mount.sh"
+. "$DIR/c_login.sh"
 
 
