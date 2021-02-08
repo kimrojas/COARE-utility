@@ -6,7 +6,12 @@
 ## COARE - TRANSFER UTILITY
 
 c_transfer () {
-  
+  # Dependencies exist?
+    pkg_exists rsync
+    if [ "$c_exit" == 1 ]; then
+        echo -e "\nExiting ... " 
+        unset c_exit && return 0
+    fi
 
 
   # ERROR CODE
