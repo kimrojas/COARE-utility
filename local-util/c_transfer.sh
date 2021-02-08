@@ -22,23 +22,33 @@ c_transfer () {
     rsync -avhzP -e "ssh -i $SSHDIR" $USERNAME@$SRVR:$2 $3
   else
     echo """
-    HELP: c_transfer
-        Facilitates the transfer between local and server directory of COARE
-        with SSH key login method. 
-        
-        Requires 'rsync' package and a registered SSH key.
-    
-    USAGE:    c_transfer [to-srvr | from-srvr] [source-path] [destination-path]
-    
-    EXAMPLE:  c_transfer to-srvr /home/kurt_local/file /home/kurt_srvr/file
+C_TRANSFER ()
 
-    OPTIONS:
-    
-        to-srvr
-          Initiates transfer protocol from local to server directory.
+NAME
+        c_transfer     - Transfer files between COARE and local directory
 
-        from-srvr
-          Initiates transfer protocol from server to local directory.
+USAGE
+        c_transfer [OPTION] SOURCE DESTINATION
+        c_transfer [OPTION] /home/user.server/file /home/user.local/file
+
+DESCRIPTION
+        Facilitates the transfer between local and server directory of COARE with SSH key login 
+        method.
+
+        No need to input the username and server hostname, just needs the relative file path 
+        (pwd output).
+
+OPTIONS
+        to-srvr         Initiates transfer protocol from local to server directory.
+
+        from-srvr       Initiates transfer protocol from server to local directory.
+
+        help            Prints this information.
+
+AUTHOR
+        Written by Kurt Irvin M. Rojas
+
+SEE ALSO 
     """
   fi
 

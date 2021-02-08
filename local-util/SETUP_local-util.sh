@@ -6,31 +6,31 @@
 DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$DIR" ]]; then DIR="PWD"; fi
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - -
-#               COARE - LOAD SETTINGS
-# - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#                COARE - LOAD SETTINGS
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 . "$DIR/SETTINGS_local.sh"
 . "$DIR/CHECK_local.sh"
 
 
 echo """
---------------------------------
-    COARE UTILITIES LOADED
---------------------------------
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+                COARE UTILITIES LOADED
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-Detected settings .... 
-  SSH id location = $c_SSHDIR
-  COARE Username  = $c_USERNAME
-  COARE Hostname  = $c_HOSTNAME
-  COARE Mount     = $c_MNTLOC
+Detected settings ...
+    SSH id location = $c_SSHDIR
+    COARE Username  = $c_USERNAME
+    COARE Hostname  = $c_HOSTNAME
+    COARE Mount     = $c_MNTLOC
 """
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - -
-#            COARE - SETUP LOCAL UTILITIES
-# ** comment out the utilities you don't want to use
-# ** no interdepencency between utilities 
-# - - - - - - - - - - - - - - - - - - - - - - - - - -
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#               COARE - SETUP LOCAL UTILITIES
+#    ** comment out the utilities you don't want to use
+#    ** no interdepencency between utilities 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 . "$DIR/c_transfer.sh"
 . "$DIR/c_mount.sh"
