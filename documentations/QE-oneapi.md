@@ -18,7 +18,7 @@ cd $HOME/apps/qe-6.7
 ./configure --with-scalapack=intel MPIF90=mpiifort CC=mpiicc FC=ifort F77=mpiifort LIBDIRS="$MKLROOT/lib $I_MPI_ROOT/lib"
 ```
 
-2. Replace
+2. Replace  
 Find `FFLAGS` and `MPI_LIBS` and replace it with the problem values. Replace `kurt.rojas` with your username.
 ```
 FFLAGS         = -O3 -assume byterecl -g -traceback  

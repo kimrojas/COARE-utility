@@ -6,7 +6,10 @@
 c_mount () {
     # Dependencies exist?
     pkg_exists sshfs fusermount gcc
-    if [ "$exit_val" == "exit" ]; then echo -e "\nExiting ... " && return 0; fi
+    if [ "$exit_val" == "exit" ]; then
+        echo -e "\nExiting ... " 
+        exit_val=0 && return 0
+    fi
 
     # Directory exist?
     if [ -d "$c_MNTLOC" ]; then
@@ -28,22 +31,26 @@ c_mount () {
         fusermount -zu $c_MNTLOC
         echo "Unmounted successfully: $c_MNTLOC"
     else
-        echo '''    
-HELP: c_mount
-    Mounts the COARE directory to a local directory. 
+        echo """
+C_MOUNT ()
 
-    Requires `sshfs` package and registered SSH key. 
+NAME
+        c_mount     - Mounts the COARE directory
 
-USAGE: c_mount [ init | unmount ]
+USAGE
+        c_mount [OPTION]
 
-OPTIONS:
+DESCRIPTION
+        Mounts the COARE DIRECTORY to the specified local directory
+        via ssh connection (ssh key login). 
 
-    init
-        Mounts the COARE directory to designated mount location.
-    
-    unmount 
-        Unmounts the COARE directory from mount location.
-        '''
+        Current mount location: $c_MNTLOC
+
+OPTIONS
+        init            Mounts the COARE directory to designated mount location.
+        unmount         Unmounts the COARE directory from mount location.
+        help            Prints this information.
+        """
 
     fi
 }
