@@ -21,7 +21,7 @@ c_transfer () {
     if [ -z $2 ] || [ -z $3 ]; then echo -e $ERROR_CODE_1 && return 1;fi
     rsync -avhzP -e "ssh -i $SSHDIR" $USERNAME@$SRVR:$2 $3
   else
-    echo """
+    echo """\
 C_TRANSFER ()
 
 NAME
@@ -49,6 +49,7 @@ AUTHOR
         Written by Kurt Irvin M. Rojas
 
 SEE ALSO 
+        Full documentation at: https://github.com/kimrojas/COARE-utility
     """
   fi
 

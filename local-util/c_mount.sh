@@ -45,7 +45,7 @@ c_mount () {
     else
 
         # Info
-        echo """
+        echo """\
 C_MOUNT ()
 
 NAME
@@ -69,6 +69,11 @@ OPTIONS
         unmount         Unmounts the COARE directory from mount location.
 
         help            Prints this information.
+AUTHOR
+        Written by Kurt Irvin M. Rojas
+
+SEE ALSO 
+        Full documentation at: https://github.com/kimrojas/COARE-utility
         """
 
     fi
