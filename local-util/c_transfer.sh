@@ -5,7 +5,7 @@
 
 ## COARE - TRANSFER UTILITY
 
-transfer () {
+c_transfer () {
   
 
 
@@ -22,15 +22,15 @@ transfer () {
     rsync -avhzP -e "ssh -i $SSHDIR" $USERNAME@$SRVR:$2 $3
   else
     echo """
-    HELP: transfer
+    HELP: c_transfer
         Facilitates the transfer between local and server directory of COARE
         with SSH key login method. 
         
         Requires 'rsync' package and a registered SSH key.
     
-    USAGE:    transfer [to-srvr | from-srvr] [source-path] [destination-path]
+    USAGE:    c_transfer [to-srvr | from-srvr] [source-path] [destination-path]
     
-    EXAMPLE:    transfer to-srvr /home/kurt_local/file /home/kurt_srvr/file
+    EXAMPLE:  c_transfer to-srvr /home/kurt_local/file /home/kurt_srvr/file
 
     OPTIONS:
     
@@ -39,14 +39,6 @@ transfer () {
 
         from-srvr
           Initiates transfer protocol from server to local directory.
-
-    --
-    CURRENT PARAMETERS:
-        SSH key file = $SSHDIR 
-        Username = $USERNAME
-        Hostname = $SRVR
-        
-        ** Please edit the parameters if needed in 'transfer-util.sh'
     """
   fi
 

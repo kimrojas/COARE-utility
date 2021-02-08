@@ -3,11 +3,6 @@
 ## For more info on the author,          ##
 ## visit: https://kimrojas.github.io     ##
 
-
-
-
-
-
 DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$DIR" ]]; then DIR="PWD"; fi
 
@@ -16,6 +11,8 @@ if [[ ! -d "$DIR" ]]; then DIR="PWD"; fi
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 . "$DIR/SETTINGS_local.sh"
+. "$DIR/CHECK_local.sh"
+
 
 echo """
 --------------------------------
@@ -35,4 +32,7 @@ Detected settings ....
 # ** no interdepencency between utilities 
 # - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-. "$DIR/transfer-util.sh"
+. "$DIR/c_transfer.sh"
+. "$DIR/c_mount.sh"
+
+
