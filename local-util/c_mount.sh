@@ -25,7 +25,7 @@ c_mount () {
         
         # Mount
         echo "Mounting ..."
-        sshfs -C $c_USERNAME@$c_HOSTNAME:/home/$c_USERNAME $c_MNTLOC -o reconnect,IdentityFile=$c_SSHDIR
+        sshfs -C $c_USERNAME@$c_HOSTNAME:/home/$c_USERNAME $c_MNTLOC -o reconnect,IdentityFile=$c_SSHDIR,follow_symlinks 
         echo "Mounted successful: $c_MNTLOC"
         echo ""
         echo "- - - - - - - - - - - - - - - - - - - - - - -"
