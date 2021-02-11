@@ -49,7 +49,7 @@ c_MNTLOC=$HOME/COARE-DIR
 3. Register the library    
 *Add the following line in the last line of your startup script (.bashrc or .bash_profile)
 ```bash
-source /<path_to_files>/COARE-util/local-util/SETUP_local-util.sh
+source /<path_to_files>/COARE-utility/local-util/SETUP_local-util.sh
 ```
 
 4. Configure ssh properties  
