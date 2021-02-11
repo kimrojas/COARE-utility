@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/kimrojas/COARE-utility" >
-        <img src="./readme_doc/logo.png">
+        <img src="./img/logo.png">
     </a>
     <h1 align="center" >COARE Utility functions</h1>
     <h3 align="center"> Written by Kurt Irvin M. Rojas </h3>
