@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/kimrojas/COARE-utility" >
-        <img src="https://asti.dost.gov.ph/wp-content/uploads/2018/07/1955073207.png">
+        <img src="./readme_doc/logo.png">
     </a>
     <h1 align="center" >COARE Utility functions</h1>
     <h3 align="center"> Written by Kurt Irvin M. Rojas </h3>
