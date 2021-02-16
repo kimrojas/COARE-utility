@@ -21,10 +21,10 @@ c_transfer () {
   # MAIN
   if [ "$1" == "to-srvr" ]; then
     if [ -z $2 ] || [ -z $3 ]; then echo -e $ERROR_CODE_1 && return 1;fi
-    rsync -avrzP -e "ssh -i $SSHDIR" $2 $USERNAME@$SRVR:$3
+    rsync -avrzP -e "ssh -i $c_SSHDIR" $2 $c_USERNAME@$c_HOSTNAME:$3
   elif [ "$1" == "from-srvr" ]; then
     if [ -z $2 ] || [ -z $3 ]; then echo -e $ERROR_CODE_1 && return 1;fi
-    rsync -avhzP -e "ssh -i $SSHDIR" $USERNAME@$SRVR:$2 $3
+    rsync -avhzP -e "ssh -i $c_SSHDIR" $c_USERNAME@$c_HOSTNAME:$2 $3
   else
     echo """\
 C_TRANSFER ()
