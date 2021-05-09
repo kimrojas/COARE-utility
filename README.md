@@ -30,7 +30,7 @@ git clone https://github.com/kimrojas/COARE-utility.git
 ```
 
 2. Setup the login credentials  
-*In `/<path_to_file>/COARE-utility/local-util/SETUP_local-util.sh`*,  
+*In `/<path_to_file>/COARE-utility/local-util/SETTTINGS_local.sh`*,  
 Edit the needed credentials, i.e.
 ```bash
 ## SSH id location [typical: $HOME/.ssh/id_rsa]
